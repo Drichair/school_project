@@ -1,0 +1,54 @@
+{% extends "main/base.html" %}
+
+
+{% block extra_css %}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+.form_ex {
+    position: relative;
+    left: 300px;
+    top : 300px;
+}
+
+.form1{
+    position: relative;
+    left: 150px;
+    width: 150px;
+    height: 40px;
+}
+.h1_login {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    left: 300px;
+}
+
+{% endblock %}
+{% block content %}
+
+<form>
+    <h1 class="h1_login">Войти</h1>
+
+    <div class="form1">
+        {{ LoginForm.username.label }} {{ LoginForm.username }}
+    </div>
+    <div class="form1">
+       {{ LoginForm.password.label }} {{ LoginForm.password }}
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">© 2021–2022</p>
+</form>
+
+
+<a class="dropdown-item disabled" href="#">Демо аккаунт <br>
+    логин: <b>vasya</b><br>
+    пароль: <b>promprog</b>
+</a>
+
+
+{% endblock %}
+

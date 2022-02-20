@@ -6,28 +6,25 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a href="#">
-          <i class='bx bx-grid-alt' ></i>
-          <span class="link_name">Dashboard</span>
+        <a href="http://127.0.0.1:8000">
+          <i class='bx bxs-home' ></i>
+          <span class="link_name">Главная</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Category</a></li>
+          <li><a class="link_name" href="#http://127.0.0.1:8000">Главная</a></li>
         </ul>
       </li>
       <li>
         <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-collection' ></i>
-            <span class="link_name">Category</span>
+          <a href="http://127.0.0.1:8000/login">
+            <i class='bx bx-log-in' ></i>
+            <span class="link_name">Войти</span>
           </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
+          <ul class="sub-menu blank">
+          <li><a class="link_name" href="#http://127.0.0.1:8000/login">Войти</a></li>
+          </ul>
+
         </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Category</a></li>
-          <li><a href="#">HTML & CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">PHP & MySQL</a></li>
-        </ul>
       </li>
       <li>
         <div class="iocn-link">
@@ -341,21 +338,21 @@
       left: 78px;
       width: calc(100% - 78px);
     }
-    .home-section .home-content{
+    .home-section {
       height: 60px;
       display: flex;
       align-items: center;
     }
-    .home-section .home-content .bx-menu,
+    .home-section .bx-menu,
     .home-section .home-content .text{
       color: #11101d;
       font-size: 35px;
     }
-    .home-section .home-content .bx-menu{
+    .home-section .bx-menu{
       margin: 0 15px;
       cursor: pointer;
     }
-    .home-section .home-content .text{
+    .home-section .text{
       font-size: 26px;
       font-weight: 600;
     }
@@ -366,12 +363,6 @@
     }
 
   </style>
-  <section class="home-section">
-    <div class="home-content">
-      <i class='bx bx-menu' ></i>
-      <span class="text">Simple Vote <i class='bx bx-message-square-check'></i></span>
-    </div>
-  </section>
   <script>
   let arrow = document.querySelectorAll(".arrow");
   for (var i = 0; i < arrow.length; i++) {
