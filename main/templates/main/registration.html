@@ -1,0 +1,43 @@
+{% extends "main/base.html" %}
+{% block extra_css %}
+.h1_block {
+ position: relative;
+ left: 210px;
+}
+
+.p_block {
+ position: relative;
+ left: 175px;
+}
+
+.form {
+ position: relative;
+ left: 180px;
+}
+
+.but {
+    width: 140px;
+    border: 3px solid #1E152A
+    font-size: 30px;
+    color: #1E152A;
+    text-decoration: none;
+    text-align: center;
+    background: #82A3A1;
+}
+
+.b1 {
+     position: relative;
+     left: 100px;
+}
+
+
+{% endblock %}
+{% block content %}
+    <h1 class="h1_block">Создание аккаунта</h1>
+    <p class="p_block">Пожалуйста, введите данные в форму для регистрации:</p>
+    <form action="." method="post" class="form">
+        {{ user_form.as_p }}
+        {% csrf_token %}
+        <p class="b1"><input type="submit" value="Создать аккаунт" class="but"></p>
+    </form>
+{% endblock %}

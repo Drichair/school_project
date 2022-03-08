@@ -1,0 +1,16 @@
+{% extends "main/base.html" %}
+
+
+
+{% block content %}
+
+<h1 class="form-header">Насколько вероятно Вы порекомендуете инструмент </h1>
+    <div class="rating-wrapper">
+        {% for radio in ToVote.choice %}
+            {{ radio.choice }}
+            <span class="radio-checkmark"></span>
+          </label>
+        {% endfor %}
+   </div>
+
+{% endblock %}

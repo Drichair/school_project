@@ -1,2 +1,19 @@
 {% extends "main/base.html" %}
 
+{% block content %}
+<h1>Доступные голосования</h1>
+<div class="col">
+            <div class="card-body">
+              <p class="card-text">  {% for item in vote_db %} {{item.question}} {% endfor %}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="http://127.0.0.1:8000/vote/1">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" >View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endblock %}

@@ -3,51 +3,47 @@
 
 {% block extra_css %}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-.form_ex {
-    position: relative;
-    left: 300px;
-    top : 300px;
-}
 
-.form1{
+.h1_div {
+
     position: relative;
-    left: 150px;
-    width: 150px;
-    height: 40px;
+    left: 240px;
 }
-.h1_login {
-    font-family: 'Poppins', sans-serif;
+.p_div {
+ position: relative;
+ left: 150px;
+}
+.form {
     position: relative;
-    left: 300px;
+    left: 180px;
 }
+.b1 {
+
+ position: relative;
+ left: 70px;
+}
+.but {
+    width: 110px;
+    border: 3px solid #1E152A
+    font-size: 30px;
+    color: #1E152A;
+    text-decoration: none;
+    text-align: center;
+    background: #82A3A1;
 
 {% endblock %}
 {% block content %}
-
-<form>
-    <h1 class="h1_login">Войти</h1>
-
-    <div class="form1">
-        {{ LoginForm.username.label }} {{ LoginForm.username }}
-    </div>
-    <div class="form1">
-       {{ LoginForm.password.label }} {{ LoginForm.password }}
-    </div>
-
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">© 2021–2022</p>
-</form>
-
-
-<a class="dropdown-item disabled" href="#">Демо аккаунт <br>
-    логин: <b>vasya</b><br>
-    пароль: <b>promprog</b>
-</a>
+<div class="h1_div">
+    <h1>Войти</h1>
+</div>
+<div class="p_div">
+    <p>Пожалуйста, введите свои данные в форму</p>
+</div>
+    <form action="." method="post" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p class="b1"><input type="submit" value="Войти" class="but"></p>
+    </form>
 
 
 {% endblock %}

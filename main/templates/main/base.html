@@ -25,7 +25,7 @@
           <span class="link_name">Главная</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#http://127.0.0.1:8000">Главная</a></li>
+          <li><a class="link_name" href="http://127.0.0.1:8000">Главная</a></li>
         </ul>
       </li>
       <li>
@@ -35,75 +35,35 @@
             <span class="link_name">Войти</span>
           </a>
           <ul class="sub-menu blank">
-          <li><a class="link_name" href="#http://127.0.0.1:8000/login">Войти</a></li>
+          <li><a class="link_name" href="http://127.0.0.1:8000/login">Войти</a></li>
           </ul>
 
         </div>
       </li>
       <li>
         <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-book-alt' ></i>
-            <span class="link_name">Posts</span>
+          <a href="http://127.0.0.1:8000/registration">
+            <i class='bx bx-user-check'></i>
+            <span class="link_name">Регистрация</span>
           </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
+           <ul class="sub-menu blank">
+          <li><a class="link_name" href="http://127.0.0.1:8000/registration">Регистрация</a></li>
+          </ul>
         </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Posts</a></li>
-          <li><a href="#">Web Design</a></li>
-          <li><a href="#">Login Form</a></li>
-          <li><a href="#">Card Design</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-pie-chart-alt-2' ></i>
-          <span class="link_name">Analytics</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Analytics</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-line-chart' ></i>
-          <span class="link_name">Chart</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Chart</a></li>
-        </ul>
       </li>
       <li>
         <div class="iocn-link">
           <a href="#">
-            <i class='bx bx-plug' ></i>
-            <span class="link_name">Plugins</span>
+            <i class='bx bx-plus' ></i>
+            <span class="link_name">Голосование</span>
           </a>
           <i class='bx bxs-chevron-down arrow' ></i>
         </div>
         <ul class="sub-menu">
-          <li><a class="link_name" href="#">Plugins</a></li>
-          <li><a href="#">UI Face</a></li>
-          <li><a href="#">Pigments</a></li>
-          <li><a href="#">Box Icons</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-compass' ></i>
-          <span class="link_name">Explore</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Explore</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-history'></i>
-          <span class="link_name">History</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">History</a></li>
+          <li><a class="link_name" href="#">Голосование</a></li>
+          <li><a href="http://127.0.0.1:8000/create">Создать</a></li>
+          <li><a href="http://127.0.0.1:8000/vote">Проголосовать</a></li>
+          <li><a href="http://127.0.0.1:8000/edit">Редактировать</a></li>
         </ul>
       </li>
       <li>
@@ -121,10 +81,12 @@
         <!--<img src="image/profile.jpg" alt="profileImg">-->
       </div>
       <div class="name-job">
-        <div class="profile_name">Prem Shahi</div>
-        <div class="job">Web Desginer</div>
+        <div class="profile_name">{{user}}</div>
+        <div class="job">Владелец</div>
       </div>
-      <i class='bx bx-log-out' ></i>
+      <a href="http://127.0.0.1:8000/logout">
+           <i class='bx bx-log-out' ></i>
+      </a>
     </div>
   </li>
 </ul>
@@ -134,6 +96,7 @@
       <i class='bx bx-menu' ></i>
       <span class="text">Simple Vote  <i class='bx bx-message-square-check'></i> </span>
     </div>
+      {% include 'main/messages.html' %}
       {% block content %}
       {% endblock %}
   </section>
@@ -352,7 +315,7 @@
 }
 .home-section{
   position: relative;
-  background: #E4E9F7;
+  background: #82A3A1;
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
@@ -407,6 +370,12 @@
     sidebar.classList.toggle("close");
   });
   </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" crossorigin="anonymous"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" crossorigin="anonymous"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"></script>
 
 </body>
 

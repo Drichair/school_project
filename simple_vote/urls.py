@@ -21,4 +21,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index_page, name='index'),
     path('login/', views.login_page, name='login'),
+    path('registration/', views.registr_page, name='registration'),
+    path('create/', views.create_page, name='create'),
+    path('vote/<int:id>', views.vote_page, name='vote'),
+    path('edit/', views.edit_page, name='edit'),
+    path('profil/', views.profil_page, name='profil'),
+    path('register_done/', views.registr_page, name="registration"),
+    path('logout/', views.logout_page, name="logout")
 ]

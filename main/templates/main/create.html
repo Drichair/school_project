@@ -1,0 +1,51 @@
+{% extends "main/base.html" %}
+
+
+{% block extra_css %}
+.h1_block{
+    position: relative;
+    left: 190px;
+}
+.form {
+    position: relative;
+    left: 220px;
+}
+.form1 {
+    width: 220px;
+}
+.but {
+    width: 140px;
+    border: 3px solid #1E152A
+    font-size: 30px;
+    color: #1E152A;
+    text-decoration: none;
+    text-align: center;
+    background: #82A3A1;
+}
+
+.b1 {
+     position: relative;
+     left: 30px;
+     top: 20px;
+}
+
+{% endblock %}
+{% block content %}
+
+<h1 class="h1_block">Создание опроса</h1>
+
+ <form action="." method="post" class="form">
+        {% csrf_token %}
+     <div class="form1">
+         {{vote_form.question.label}} {{ vote_form.question }}
+     </div>
+     <div class="form1">
+         {{vote_form.ans1.label}} {{ vote_form.ans1 }}
+     </div>
+     <div class="form1">
+         {{ vote_form.ans2 }}
+     </div>
+     <input type="submit" class="b1" value="Отправить">
+ </form>
+
+{% endblock %}
